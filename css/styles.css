@@ -1,0 +1,80 @@
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 30px;
+  background-color: rgb(123, 12, 101);
+  display: flexbox;
+}
+
+/* Animação de rotação */
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* Animação de SlideIn */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(50%);
+  }
+}
+/* Animação de fade in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Animação de salto */
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.rotating {
+  animation: rotating 2s infinite;
+}
+.pulse {
+  animation: pulse 2s infinite;
+}
+.slideIn {
+  animation: slideIn 2s infinite;
+} /* Corrigido para aplicar a um elemento com a classe .child dentro do .box */
+.fadeIn {
+  animation: fadeIn 2s infinite;
+}
+.bounce {
+  animation: bounce 2s infinite;
+}
